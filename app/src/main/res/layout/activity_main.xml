@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    >
+
+    <RadioGroup
+        android:id="@+id/rg_whole"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/radiobutton_whole"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:drawableTop="@drawable/tab_home_sel"
+            android:text="@string/home_page"
+            android:textColor="@color/radiobutton_text"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_recommend"
+            style="@style/radiobutton_whole"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/tab_hospital_sel"
+            android:text="@string/hospital_recommended"
+            android:textColor="@color/radiobutton_text"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_health_news"
+            style="@style/radiobutton_whole"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/tab_news_sel"
+            android:text="@string/healthy_news"
+            android:textColor="@color/radiobutton_text"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/radiobutton_whole"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/tab_my_sel"
+            android:text="@string/mine"
+            android:textColor="@color/radiobutton_text"
+            />
+
+    </RadioGroup>
+    <View
+        android:id="@+id/rb_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grap1"
+        android:layout_above="@+id/rg_whole"
+        android:background="@color/separate_view_color"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_whole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rb_line"
+        >
+
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

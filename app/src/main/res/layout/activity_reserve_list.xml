@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/dan_gray"
+              android:orientation="vertical"
+    >
+
+    <!--头文件-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height90"
+        android:background="@color/blue2"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/header_left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@mipmap/navigation_back"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/header_center_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/reserve"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_center"
+            />
+
+    </RelativeLayout>
+
+    <!--标题Tag-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/reserve_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/tab_dropdown"
+            android:gravity="center"
+            android:padding="@dimen/home_rl_padding"
+            android:text="全部"
+            android:textSize="@dimen/reserve_details_static"
+            />
+
+        <View
+            android:layout_width="@dimen/grap1"
+            android:layout_height="match_parent"
+            android:background="@color/separate_view_color"
+            />
+
+        <TextView
+            android:id="@+id/reserve_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/tab_dropdown"
+            android:gravity="center"
+            android:padding="@dimen/home_rl_padding"
+            android:text="全部"
+            android:textSize="@dimen/reserve_details_static"
+            />
+    </LinearLayout>
+
+    <include layout="@layout/line"/>
+
+    <ListView
+        android:id="@+id/lv_reserve_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        />
+</LinearLayout>

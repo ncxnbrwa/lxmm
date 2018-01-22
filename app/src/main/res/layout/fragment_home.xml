@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/dan_gray"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/blue"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/grap10"
+        android:paddingLeft="@dimen/grap20"
+        android:paddingRight="@dimen/grap20"
+        android:paddingTop="@dimen/grap10"
+        >
+
+        <TextView
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/search_conner"
+            android:drawableRight="@mipmap/search_zoom"
+            android:paddingBottom="@dimen/grap10"
+            android:paddingLeft="@dimen/grap40"
+            android:paddingRight="@dimen/grap40"
+            android:paddingTop="@dimen/grap10"
+            android:singleLine="true"
+            android:text="@string/search_hint"
+            android:textColor="@color/dam_black"
+            android:textSize="@dimen/home_titlesize"
+            />
+    </LinearLayout>
+
+    <com.nuocf.yshuobang.myview.swipeRefresh.RefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <com.nuocf.yshuobang.myview.swipeRefresh.RefreshScrollView
+            android:id="@+id/refresh_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            >
+
+            <com.nuocf.yshuobang.myview.swipeRefresh.ScrollLinerLayout
+                android:id="@+id/scroll_liner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!--头部广告轮播页-->
+                <com.youth.banner.Banner
+                    android:id="@+id/home_pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                </com.youth.banner.Banner>
+
+                <LinearLayout
+                    android:id="@+id/home_ll_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="false"
+                    android:orientation="horizontal"
+                    >
+
+                    <!--手术预约项-->
+                    <RelativeLayout
+                        android:id="@+id/appointment_rl"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.8"
+                        android:clickable="true"
+                        android:padding="@dimen/home_rl_padding"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            >
+
+                            <ImageView
+                                android:id="@+id/appointment_iv"
+                                android:layout_width="@dimen/width153"
+                                android:layout_height="@dimen/width153"
+                                android:layout_centerHorizontal="true"
+                                android:clickable="false"
+                                android:scaleType="centerInside"
+                                android:src="@mipmap/home_icon_01"
+                                />
+
+                            <TextView
+                                android:id="@+id/appointment_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/appointment_iv"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/home_text_margin"
+                                android:clickable="false"
+                                android:text="@string/appointment_title"
+                                android:textSize="@dimen/home_titlesize"
+                                />
+
+                            <TextView
+                                android:id="@+id/appointment_msg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/appointment_title"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/home_text_margin"
+                                android:clickable="false"
+                                android:text="@string/appointment_msg"
+                                android:textColor="@color/home_textcolor"
+                                android:textSize="@dimen/home_msgsize"
+                                />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/grap1"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:clickable="false"
+                        android:orientation="vertical"
+                        >
+
+                        <!--快速问诊项-->
+                        <RelativeLayout
+                            android:id="@+id/interrogation_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/grap0"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="@dimen/home_rl_padding"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:clickable="false"
+                                >
+
+                                <TextView
+                                    android:id="@+id/interrogation_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:clickable="false"
+                                    android:text="@string/interrogation_title"
+                                    android:textSize="@dimen/home_titlesize"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/interrogation_msg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/interrogation_title"
+                                    android:layout_below="@+id/interrogation_title"
+                                    android:layout_marginTop="@dimen/home_text_margin"
+                                    android:clickable="false"
+                                    android:text="@string/interrogation_msg"
+                                    android:textColor="@color/home_textcolor"
+                                    android:textSize="@dimen/home_msgsize"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/interrogation_iv"
+                                    android:layout_width="@dimen/icon120"
+                                    android:layout_height="@dimen/icon120"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_toRightOf="@+id/interrogation_msg"
+                                    android:clickable="false"
+                                    android:scaleType="centerInside"
+                                    android:src="@mipmap/home_icon_02"
+                                    />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/grap1"
+                            android:background="@color/gray"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/grap0"
+                            android:layout_weight="3"
+                            android:clickable="false"
+                            android:orientation="horizontal"
+                            >
+
+                            <!--海外医疗项-->
+                            <RelativeLayout
+                                android:id="@+id/oversea_rl"
+                                android:layout_width="@dimen/grap0"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:padding="@dimen/home_rl_padding"
+                                >
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:clickable="false"
+                                    >
+
+                                    <ImageView
+                                        android:id="@+id/overseas_iv"
+                                        android:layout_width="@dimen/icon120"
+                                        android:layout_height="@dimen/icon120"
+                                        android:layout_centerHorizontal="true"
+                                        android:clickable="false"
+                                        android:scaleType="centerInside"
+                                        android:src="@mipmap/home_icon_03"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/overseas_title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/overseas_iv"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginTop="@dimen/home_text_margin"
+                                        android:clickable="false"
+                                        android:text="@string/overseas_title"
+                                        android:textSize="@dimen/home_titlesize"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/overseas_msg"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/overseas_title"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginTop="@dimen/home_text_margin"
+                                        android:clickable="false"
+                                        android:text="@string/overseas_msg"
+                                        android:textColor="@color/home_textcolor"
+                                        android:textSize="@dimen/home_msgsize"
+                                        />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="@dimen/grap1"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray"
+                                />
+
+                            <!--绿色通道项-->
+                            <RelativeLayout
+                                android:id="@+id/green_channel_rl"
+                                android:layout_width="@dimen/grap0"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:padding="@dimen/home_rl_padding"
+                                >
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:clickable="false"
+                                    >
+
+                                    <ImageView
+                                        android:id="@+id/green_channel_iv"
+                                        android:layout_width="@dimen/icon120"
+                                        android:layout_height="@dimen/icon120"
+                                        android:layout_centerHorizontal="true"
+                                        android:clickable="false"
+                                        android:scaleType="centerInside"
+                                        android:src="@mipmap/home_icon_04"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/green_channel_title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/green_channel_iv"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginTop="@dimen/home_text_margin"
+                                        android:clickable="false"
+                                        android:text="@string/green_channel_title"
+                                        android:textSize="@dimen/home_titlesize"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/green_channel_msg"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/green_channel_title"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginTop="@dimen/home_text_margin"
+                                        android:clickable="false"
+                                        android:text="@string/green_channel_msg"
+                                        android:textColor="@color/home_textcolor"
+                                        android:textSize="@dimen/home_msgsize"
+                                        />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--名医推荐-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/grap15"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    android:text="@string/doctors_recommend"
+                    android:textColor="@color/home_textcolor"
+                    android:textSize="@dimen/home_titlesize"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/gray"
+                    />
+
+                <!--精准预约项-->
+                <RelativeLayout
+                    android:id="@+id/precise_reservation_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/home_banner_02"
+                    >
+
+                    <ImageView
+                        android:id="@+id/precise_reservation_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/home_banner_01"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/ll_oversea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/precise_reservation_iv"
+                        android:padding="8dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_precise_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="精准预约"
+                            android:textSize="@dimen/home_titlesize"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_precise_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/tv_precise_title"
+                            android:layout_below="@+id/tv_precise_title"
+                            android:layout_marginTop="16dp"
+                            android:text="让专家帮你找医生"
+                            android:textColor="@color/msg_text"
+                            android:textSize="@dimen/home_msgsize"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/gray"
+                    />
+
+                <!--随机推荐医生列表-->
+                <com.nuocf.yshuobang.myview.WrapListView
+                    android:id="@+id/lv_famous_doctors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/gray"
+                    />
+
+                <!--热门资讯项-->
+                <TextView
+                    android:id="@+id/hot_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/grap15"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    android:text="@string/hot_news"
+                    android:textColor="@color/home_textcolor"
+                    android:textSize="@dimen/home_titlesize"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/gray"
+                    />
+
+                <!--热门资讯列表list-->
+                <com.nuocf.yshuobang.myview.WrapListView
+                    android:id="@+id/lv_hot_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/grap1"
+                    android:background="@color/white"
+                    />
+            </com.nuocf.yshuobang.myview.swipeRefresh.ScrollLinerLayout>
+
+        </com.nuocf.yshuobang.myview.swipeRefresh.RefreshScrollView>
+
+    </com.nuocf.yshuobang.myview.swipeRefresh.RefreshLayout>
+
+</LinearLayout>

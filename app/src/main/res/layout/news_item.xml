@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/home_rl_padding"
+    >
+
+    <TextView
+        android:id="@+id/fragment_news_title"
+        style="@style/lv_tv_titlestyle"
+        android:layout_toRightOf="@+id/fragment_news_iv"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="title"
+        />
+
+    <TextView
+        android:id="@+id/fragment_news_msg"
+        style="@style/lv_tv_msgstyle"
+        android:layout_alignLeft="@+id/fragment_news_title"
+        android:layout_below="@+id/fragment_news_title"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="msg"
+        android:textColor="@color/msg_text"
+        />
+
+    <com.nuocf.yshuobang.myview.ZQImageViewRoundOval
+        android:id="@+id/fragment_news_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fragment_news_msg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/fragment_news_title"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"
+        />
+</RelativeLayout>

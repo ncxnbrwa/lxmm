@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/region_city_bg"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/line"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/province_lv"
+            style="@style/listview_style"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:divider="@color/separate_view_color"
+            android:dividerHeight="@dimen/grap0.01"
+            android:background="@color/low_gray"/>
+
+        <ListView
+            android:id="@+id/city_lv"
+            style="@style/listview_style"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            />
+    </LinearLayout>
+</LinearLayout>

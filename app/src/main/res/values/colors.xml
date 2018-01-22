@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#DDDDDD</color>
+    <color name="dan_gray">#F0F0F0</color>
+    <color name="blue">#36B4F1</color>
+    <color name="blue2">#36B4F2</color>
+
+    <color name="orange">#F46626</color>
+    <color name="red">#ff0000</color>
+    <color name="header_bg">#fe6f07</color>
+    <color name="dimgray">#696969</color>
+    <!-- 暗灰色 -->
+    <color name="dimgrey">#696969</color>
+    <!-- 暗灰色 -->
+    <!-- 亚麻色 -->
+    <color name="gainsboro">#dcdcdc</color>
+    <!-- 淡灰色 -->
+    <color name="title_text">#4b4b4b</color>
+    <!-- 标题黑色 -->
+    <color name="note_text">#efefef</color>
+    <!-- 注释灰色 -->
+    <color name="hint_text">#cccccc</color>
+    <!-- 提示框内淡灰色 -->
+    <color name="bright_orange_text">#ff7201</color>
+    <!-- 亮橙色 -->
+    <color name="bright_yellow">#EEEE00</color>
+    <!-- 亮黄色 -->
+    <color name="dark_gray_text">#999999</color>
+    <!-- 暗淡灰色 -->
+    <color name="dark_green">#228B22</color>
+    <!-- 暗绿色 -->
+    <color name="bright_green">#99CC99</color>
+    <!-- 淡绿色 -->
+    <color name="title_bar_blue">#FF69B4</color>
+    <!-- 标题栏蓝色 -->
+    <color name="rectangle__button_orange">#fe8d1e</color>
+    <!-- 矩形按钮橙色 -->
+
+    <!--主页小文字颜色-->
+    <color name="home_textcolor">#B6B6B6</color>
+    <!--radiobutton颜色-->
+    <color name="home_radio_true">#74C0F2</color>
+    <color name="home_radio_false">#989898</color>
+
+    <!--分割线的颜色-->
+    <color name="separate_view_color">#DDDDDD</color>
+
+    <!--小字颜色-->
+    <color name="msg_text">#999999</color>
+    <color name="msg_text2">#555555</color>
+    <color name="low_gray">#F2F2F2</color>
+    <color name="dam_black">#4F4F4F</color>
+    <color name="dialog_green">#6AA356</color>
+
+    <!--头部刷新时候的四种颜色-->
+    <color name="refresh_color_1">#ff00ddff</color>
+    <color name="refresh_color_2">#ff99cc00</color>
+    <color name="refresh_color_3">#ffffbb33</color>
+    <color name="refresh_color_4">#ffff4444</color>
+</resources>

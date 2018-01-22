@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_no_use"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/low_gray"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/line"/>
+
+        <Button
+            android:id="@+id/item_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_province_bg"
+            android:gravity="left"
+            android:padding="@dimen/grap15"
+            android:text="全部"
+            android:textColor="@color/selcolor_region_item_text"
+            android:textSize="@dimen/font16"
+            />
+
+        <include layout="@layout/line"/>
+
+        <Button
+            android:id="@+id/item_arrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_province_bg"
+            android:gravity="left"
+            android:padding="@dimen/grap15"
+            android:text="待安排"
+            android:textColor="@color/selcolor_region_item_text"
+            android:textSize="@dimen/font16"
+            />
+
+        <include layout="@layout/line"/>
+
+        <Button
+            android:id="@+id/item_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_province_bg"
+            android:gravity="left"
+            android:padding="@dimen/grap15"
+            android:text="待确认"
+            android:textColor="@color/selcolor_region_item_text"
+            android:textSize="@dimen/font16"
+            />
+
+        <include layout="@layout/line"/>
+
+        <Button
+            android:id="@+id/item_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_province_bg"
+            android:gravity="left"
+            android:padding="@dimen/grap15"
+            android:text="已完成"
+            android:textColor="@color/selcolor_region_item_text"
+            android:textSize="@dimen/font16"
+            />
+
+        <include layout="@layout/line"/>
+
+        <Button
+            android:id="@+id/item_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_province_bg"
+            android:gravity="left"
+            android:padding="@dimen/grap15"
+            android:text="已评价"
+            android:textColor="@color/selcolor_region_item_text"
+            android:textSize="@dimen/font16"
+            />
+
+        <include layout="@layout/line"/>
+
+        <Button
+            android:id="@+id/item_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_province_bg"
+            android:gravity="left"
+            android:padding="@dimen/grap15"
+            android:text="已取消"
+            android:textColor="@color/selcolor_region_item_text"
+            android:textSize="@dimen/font16"
+            />
+
+        <include layout="@layout/line"/>
+
+    </LinearLayout>
+</LinearLayout>

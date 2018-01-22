@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/dan_gray"
+              android:orientation="vertical"
+              android:paddingBottom="8dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <TextView
+            android:id="@+id/tv_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="订单编号"
+            />
+
+        <TextView
+            android:id="@+id/tv_order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="已安排"
+            android:textColor="@color/blue"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grap1"
+        android:background="@color/separate_view_color"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/home_rl_padding"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张有赞"
+            android:textSize="@dimen/reserve_details_static"
+            />
+
+        <TextView
+            android:id="@+id/tv_reserve_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_name"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="8dp"
+            android:text="下单时间"
+            android:textColor="@color/msg_text"
+            android:textSize="@dimen/reserve_details_dynamic"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

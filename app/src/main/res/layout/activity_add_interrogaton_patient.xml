@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dan_gray"
+                android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_reserve_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!--头布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height90"
+            android:background="@color/blue2"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/header_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/navigation_back"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/header_center_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="添加问诊人"
+                android:textColor="@color/white"
+                android:textSize="@dimen/header_center"
+                />
+
+        </RelativeLayout>
+
+        <!--信息提示-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_common"
+            android:layout_marginLeft="@dimen/margin_common"
+            android:layout_marginTop="@dimen/margin_common"
+            android:text="@string/add_patient_remind"
+            android:textColor="@color/dark_gray_text"
+            />
+
+        <!--病人姓名项-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/home_rl_padding"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/patient_name"
+                android:textSize="@dimen/reserve_details_static"
+                />
+
+            <EditText
+                android:id="@+id/et_patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="输入姓名"
+                android:textColorHint="@color/hint_text"
+                android:textSize="@dimen/reserve_details_static"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grap1"
+            android:background="@color/separate_view_color"
+            />
+
+        <!--病人性别项-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/home_rl_padding"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/patient_sex"
+                android:textSize="@dimen/reserve_details_static"
+                />
+
+            <RadioGroup
+                android:id="@+id/rg_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:id="@+id/rb_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_selector"
+                    android:text="男"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/grap15"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_selector"
+                    android:text="女"
+                    />
+
+            </RadioGroup>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grap1"
+            android:background="@color/separate_view_color"
+            />
+
+        <!--病人年龄项-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/home_rl_padding"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/patient_age"
+                android:textSize="@dimen/reserve_details_static"
+                />
+
+            <EditText
+                android:id="@+id/et_patient_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="right"
+                android:textColorHint="@color/hint_text"
+                android:hint="输入年龄"
+                android:inputType="number"
+                android:textSize="@dimen/reserve_details_static"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grap1"
+            android:background="@color/dan_gray"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/interrogation_done"
+        style="@style/all_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/grap40"
+        android:text="@string/reserve_done"
+        />
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/low_gray"
+    android:orientation="vertical">
+
+    <!--头布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height90"
+        android:background="@color/blue2"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/header_left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@mipmap/navigation_back"
+            android:gravity="center"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:id="@+id/header_center_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/doctors_list"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_center" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:dividerPadding="@dimen/grap1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_sections"
+            android:layout_width="@dimen/grap0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:padding="@dimen/home_rl_padding">
+
+            <TextView
+                android:id="@+id/tv_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:drawableLeft="@mipmap/icon_department"
+                android:gravity="center"
+                android:text="全部科室"
+                android:textSize="@dimen/reserve_details_static" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/tab_dropdown"
+                android:clickable="false" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/grap1"
+            android:layout_height="match_parent"
+            android:background="@color/separate_view_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sort"
+            android:layout_width="@dimen/grap0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:padding="@dimen/home_rl_padding">
+
+            <TextView
+                android:id="@+id/tv_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:drawableLeft="@mipmap/icon_sort"
+                android:gravity="center"
+                android:text="综合排序"
+                android:textSize="@dimen/reserve_details_static" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/tab_dropdown"
+                android:clickable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+    <com.nuocf.yshuobang.myview.swipeListView.RefreshAndLoadMoreView
+        android:id="@+id/refresh_and_load_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.nuocf.yshuobang.myview.swipeListView.LoadMoreListView
+        android:id="@+id/lv_doctors"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/gainsboro"
+        android:dividerHeight="0.1dp"
+        android:fadingEdge="none"
+        android:focusableInTouchMode="true"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+    </com.nuocf.yshuobang.myview.swipeListView.RefreshAndLoadMoreView>
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dan_gray"
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <!--头布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height90"
+            android:background="@color/blue2"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/header_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/navigation_back"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/header_center_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="用户中心"
+                android:textColor="@color/white"
+                android:textSize="@dimen/header_center"
+                />
+
+        </RelativeLayout>
+
+        <!--手机号码项-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:padding="@dimen/home_rl_padding"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="手机号"
+                android:textColor="@color/msg_text"
+                android:textSize="@dimen/reserve_details_static"
+                />
+
+            <TextView
+                android:id="@+id/tv_user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:layout_marginRight="8dp"
+                android:text=""
+                android:textSize="@dimen/reserve_details_static"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grap1"
+            android:background="@color/separate_view_color"
+            />
+
+
+        <!--用户名项-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:padding="@dimen/home_rl_padding"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="用户名"
+                android:textColor="@color/msg_text"
+                android:textSize="@dimen/reserve_details_static"
+                />
+
+            <com.nuocf.yshuobang.myview.ClearEditText
+                android:id="@+id/tv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:gravity="right"
+                android:layout_marginRight="@dimen/margin_common"
+                android:text=""
+                android:textSize="@dimen/reserve_details_static"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--底部按钮-->
+    <Button
+        android:id="@+id/btn_done"
+        style="@style/all_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="修改完成"
+        />
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dan_gray"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <!--头布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height90"
+            android:background="@color/blue2"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/header_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/navigation_back"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/header_center_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="预约评价"
+                android:textColor="@color/white"
+                android:textSize="@dimen/header_center"
+                />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/msg_text2"
+            android:padding="@dimen/home_rl_padding"
+            android:textSize="14sp"
+            android:hint="请输入评论内容"
+            android:background="@null"
+            android:text=""
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_comment_done"
+        style="@style/all_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="发表评价"
+        />
+</RelativeLayout>

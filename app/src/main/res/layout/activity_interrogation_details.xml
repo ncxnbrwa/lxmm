@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/dan_gray"
+              android:orientation="vertical"
+    >
+    <!--头布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height90"
+        android:background="@color/blue2"
+        android:gravity="center_vertical"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <TextView
+            android:id="@+id/header_left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@mipmap/navigation_back"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/header_center_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/interrogation_details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_center"
+            />
+
+        <Button
+            android:id="@+id/header_right_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <!--病人回复名字加时间项-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <ImageView
+            android:id="@+id/iv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_question"
+            />
+
+        <TextView
+            android:id="@+id/tv_disease_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_common"
+            android:layout_toRightOf="@+id/iv_question"
+            android:text=""
+            android:textSize="@dimen/reserve_details_static"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_inquiry_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="@color/msg_text"
+            android:textSize="@dimen/reserve_details_dynamic"
+            />
+    </RelativeLayout>
+
+    <!--病人回复疾病描述项-->
+
+    <TextView
+        android:id="@+id/tv_disease_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/home_rl_padding"
+        android:text=""
+        android:textSize="@dimen/reserve_details_static"
+        />
+
+    <!--医生回复名字加时间项-->
+    <RelativeLayout
+        android:id="@+id/rl_reanswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <ImageView
+            android:id="@+id/iv_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_answer"
+            />
+
+        <TextView
+            android:id="@+id/tv_inquiry_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_common"
+            android:layout_toRightOf="@+id/iv_answer"
+            android:text=""
+            android:textSize="@dimen/reserve_details_static"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_inquiry_retime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="@color/msg_text"
+            android:textSize="@dimen/reserve_details_dynamic"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grap1"
+        android:background="@color/separate_view_color"
+        />
+
+    <!--医生回复问题分析项-->
+    <TextView
+        android:id="@+id/tv_inquiry_reanwser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/home_rl_padding"
+        android:text=""
+        android:textColor="@color/msg_text2"
+        android:textSize="@dimen/reserve_details_static"
+        android:visibility="gone"
+        />
+</LinearLayout>

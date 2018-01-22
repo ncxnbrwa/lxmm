@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/dan_gray"
+              android:orientation="vertical"
+    >
+
+    <!--用户名信息项-->
+    <RelativeLayout
+        android:id="@+id/user_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/doctor_img"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <RelativeLayout
+            android:id="@+id/user_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            >
+
+            <com.nuocf.yshuobang.myview.ZQImageViewRoundOval
+                android:id="@+id/user_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/default_avatar"
+                />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mine_textsize"
+                />
+
+            <TextView
+                android:id="@+id/user_name_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="number"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/mine_header_right_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/navigation_set"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grap1"
+        android:background="@color/gray"
+        />
+    <!--问诊记录项-->
+    <RelativeLayout
+        android:id="@+id/interrogation_record_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <ImageView
+            android:id="@+id/interrogation_record_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:src="@mipmap/mine_record"
+            />
+
+        <TextView
+            android:id="@+id/interrogation_record_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_common"
+            android:layout_toRightOf="@+id/interrogation_record_iv"
+            android:clickable="false"
+            android:text="@string/interrogation_record_tv"
+            android:textSize="@dimen/mine_textsize"
+            />
+
+        <ImageView
+            android:id="@+id/interrogation_record_arrow"
+            style="@style/right_arrow"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grap1"
+        android:background="@color/gray"
+        />
+
+    <!--预约订单项-->
+    <RelativeLayout
+        android:id="@+id/reserve_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <ImageView
+            android:id="@+id/reserve_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:src="@mipmap/mine_order"
+            />
+
+        <TextView
+            android:id="@+id/reserve_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_common"
+            android:layout_toRightOf="@+id/reserve_iv"
+            android:clickable="false"
+            android:text="@string/reserve"
+            android:textSize="@dimen/mine_textsize"
+            />
+
+        <ImageView
+            android:id="@+id/reserve_arrow"
+            style="@style/right_arrow"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grap1"
+        android:background="@color/gray"
+        />
+
+    <!--常见问题项-->
+    <RelativeLayout
+        android:id="@+id/common_problem_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <ImageView
+            android:id="@+id/common_problem_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:src="@mipmap/mine_faq"
+            />
+
+        <TextView
+            android:id="@+id/common_problem_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_common"
+            android:layout_toRightOf="@+id/common_problem_iv"
+            android:clickable="false"
+            android:text="@string/common_problem"
+            android:textSize="@dimen/mine_textsize"
+            />
+
+        <ImageView
+            android:id="@+id/common_problem_arrow"
+            style="@style/right_arrow"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grap1"
+        android:background="@color/gray"
+        />
+
+    <!--关于我们项-->
+    <RelativeLayout
+        android:id="@+id/about_us_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <ImageView
+            android:id="@+id/about_us_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:src="@mipmap/mine_about"
+            />
+
+        <TextView
+            android:id="@+id/about_us_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_common"
+            android:layout_toRightOf="@+id/about_us_iv"
+            android:clickable="false"
+            android:text="@string/about_us"
+            android:textSize="@dimen/mine_textsize"
+            />
+
+        <ImageView
+            android:id="@+id/about_us_arrow"
+            style="@style/right_arrow"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grap1"
+        android:background="@color/gray"
+        />
+</LinearLayout>

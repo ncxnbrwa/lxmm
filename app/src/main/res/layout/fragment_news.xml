@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dan_gray"
+    android:orientation="vertical">
+
+    <!--头布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height90"
+        android:background="@color/blue2"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/header_center_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/healthy_news"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_center" />
+
+    </RelativeLayout>
+
+    <com.nuocf.yshuobang.myview.swipeListView.RefreshAndLoadMoreView
+        android:id="@+id/refresh_and_load_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.nuocf.yshuobang.myview.swipeListView.LoadMoreListView
+            android:id="@+id/refresh_lv_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/gainsboro"
+            android:dividerHeight="0.1dp"
+            android:fadingEdge="none"
+            android:focusableInTouchMode="true"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+    </com.nuocf.yshuobang.myview.swipeListView.RefreshAndLoadMoreView>
+</LinearLayout>

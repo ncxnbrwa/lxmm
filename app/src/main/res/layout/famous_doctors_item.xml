@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/home_rl_padding"
+    >
+
+    <ImageView
+        android:id="@+id/doctors_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/doctors_hospital"
+        android:layout_alignTop="@+id/doctors_name"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/doctors_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/doctors_iv"
+        android:text="@string/doctors_title"
+        android:textSize="@dimen/home_titlesize"
+        />
+
+    <TextView
+        android:id="@+id/doctors_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/doctors_name"
+        android:layout_below="@+id/doctors_name"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="擅长："
+        android:textColor="@color/msg_text"
+        android:textSize="@dimen/home_msgsize"
+        />
+
+    <TextView
+        android:id="@+id/doctors_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/doctors_name"
+        android:layout_below="@+id/doctors_detail"
+        android:layout_marginTop="5dp"
+        android:text="长沙长江医院"
+        android:textColor="@color/msg_text"
+        android:textSize="@dimen/home_msgsize"
+        />
+
+    <TextView
+        android:id="@+id/doctors_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/doctors_hospital"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/doctors_hospital"
+        android:text="副主任"
+        android:textColor="@color/msg_text"
+        android:textSize="@dimen/home_msgsize"
+        />
+
+</RelativeLayout>

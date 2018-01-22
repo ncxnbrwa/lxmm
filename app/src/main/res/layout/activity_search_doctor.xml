@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/dan_gray"
+              android:orientation="vertical"
+    >
+
+    <!--头布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue2"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:background="@drawable/search_background"
+            android:clickable="false"
+            >
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@null"
+                android:layout_toLeftOf="@+id/iv_search"
+                android:hint="@string/search_hint"
+                android:padding="2dp"
+                android:textSize="@dimen/reserve_details_static"
+                />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@drawable/search_sel"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/reserve_details_static"
+            />
+    </RelativeLayout>
+
+    <!--搜索医生项-->
+    <RelativeLayout
+        android:id="@+id/rl_search_doctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/home_rl_padding"
+        >
+
+        <ImageView
+            android:id="@+id/iv_search_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search_doctor"
+            />
+
+        <TextView
+            android:id="@+id/tv_search_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_search_doctor"
+            android:text="搜索医生"
+            android:textSize="@dimen/reserve_details_static"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_search_doctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></ListView>
+
+</LinearLayout>

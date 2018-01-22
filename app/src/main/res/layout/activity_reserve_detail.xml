@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dan_gray"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_button"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        >
+
+        <!--头布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height90"
+            android:background="@color/blue2"
+            >
+
+            <TextView
+                android:id="@+id/header_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/navigation_back"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/header_center_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/reserve_details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/header_center"
+                />
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!--下单时间-->
+                <TextView
+                    android:id="@+id/tv_patient_reservetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/home_rl_padding"
+                    android:text=""
+                    android:textColor="@color/msg_text"
+                    />
+
+                <!--订单类型项-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    >
+
+                    <TextView
+                        android:id="@+id/list_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="订单类型"
+                        android:textColor="@color/msg_text"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <TextView
+                        android:id="@+id/list_type_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/separate_view_color"
+                    />
+
+                <!--订单编号项-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    >
+
+                    <TextView
+                        android:id="@+id/list_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="订单编号"
+                        android:textColor="@color/msg_text"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <TextView
+                        android:id="@+id/list_code_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/separate_view_color"
+                    />
+
+                <!--患者项-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_patient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="患者"
+                        android:textColor="@color/msg_text"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <TextView
+                        android:id="@+id/et_patient_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/separate_view_color"
+                    />
+                <!--疾病名称项-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_disease_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="疾病名称"
+                        android:textColor="@color/msg_text"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_disease_namename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/separate_view_color"
+                    />
+
+                <!--期望就诊城市项-->
+                <RelativeLayout
+                    android:id="@+id/rl_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="期望就诊城市"
+                        android:padding="@dimen/home_rl_padding"
+                        android:textColor="@color/msg_text"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_city_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/home_rl_padding"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grap1"
+                        android:layout_below="@+id/tv_city"
+                        android:background="@color/separate_view_color"
+                        />
+                </RelativeLayout>
+
+                <!--期望就诊时间项-->
+                <RelativeLayout
+                    android:id="@+id/rl_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="期望就诊时间"
+                        android:padding="@dimen/home_rl_padding"
+                        android:textColor="@color/msg_text"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_time_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/home_rl_padding"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grap1"
+                        android:layout_below="@+id/tv_time"
+                        android:background="@color/separate_view_color"
+                        />
+                </RelativeLayout>
+
+
+                <!--病情描述项-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_disease_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="病情描述"
+                        android:textColor="@color/msg_text"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_disease_details_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_disease_details"
+                        android:layout_marginTop="8dp"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/separate_view_color"
+                    />
+                <!--病情资料项-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    >
+
+                    <TextView
+                        android:id="@+id/disease_details_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="病情资料"
+                        android:textColor="@color/msg_text"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/separate_view_color"
+                    />
+
+                <!--病情资料图片项-->
+                <com.eeb.pickpiclib.NoScrollGridView
+                    android:id="@+id/disease_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="5"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"
+                    >
+                </com.eeb.pickpiclib.NoScrollGridView>
+
+                <!--更新时间项-->
+                <TextView
+                    android:id="@+id/tv_state_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/home_rl_padding"
+                    android:textColor="@color/msg_text"
+                    />
+                <!--状态项-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="状态"
+                        android:textColor="@color/msg_text"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_state_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grap1"
+                    android:background="@color/separate_view_color"
+                    />
+
+                <!--备注项-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="100dp"
+                    android:background="@color/white"
+                    android:padding="@dimen/home_rl_padding"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_ps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="备注"
+                        android:textColor="@color/msg_text"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+
+                    <TextView
+                        android:id="@+id/ps_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_ps"
+                        android:layout_below="@+id/tv_ps"
+                        android:layout_marginTop="8dp"
+                        android:textSize="@dimen/reserve_details_static"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!--底部两个按钮-->
+    <RelativeLayout
+        android:id="@+id/rl_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100dp"
+        android:padding="@dimen/home_rl_padding"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/all_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="确认"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_evaluate"
+            style="@style/all_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="评价"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</RelativeLayout>

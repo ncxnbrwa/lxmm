@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dan_gray"
+    android:orientation="vertical">
+
+    <!--头布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height90"
+        android:background="@color/blue2"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/recommend_header_right_bt"
+            android:layout_width="@dimen/width123"
+            android:layout_height="@dimen/width90"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/navigation_dropdown"
+            android:gravity="center"
+            android:maxEms="3"
+            android:singleLine="true"
+            android:text="@string/region"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/header_center_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/hospital_recommended"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_center" />
+
+    </RelativeLayout>
+
+    <com.nuocf.yshuobang.myview.swipeListView.RefreshAndLoadMoreView
+        android:id="@+id/refresh_and_load_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.nuocf.yshuobang.myview.swipeListView.LoadMoreListView
+            android:id="@+id/lv_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/gainsboro"
+            android:dividerHeight="0.1dp"
+            android:fadingEdge="none"
+            android:focusableInTouchMode="true"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+    </com.nuocf.yshuobang.myview.swipeListView.RefreshAndLoadMoreView>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/home_rl_padding"
+    >
+
+
+    <TextView
+        android:id="@+id/tv_inquiry_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/grap15"
+        android:text="MSG"
+        android:textSize="@dimen/reserve_details_static"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tv_interrogation_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_inquiry_name"
+        android:layout_below="@+id/tv_inquiry_name"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/tv_state"
+        android:text="小孩感冒发烧，退烧不了"
+        android:textColor="@color/msg_text"
+        android:textSize="@dimen/reserve_details_dynamic"
+        />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="2016/08/12"
+        android:textColor="@color/msg_text"
+        />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_date"
+        android:layout_marginTop="5dp"
+        android:text="未回复"
+        android:textColor="@color/orange"
+        />
+</RelativeLayout>

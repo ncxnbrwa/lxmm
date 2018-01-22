@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+        >
+        <!--头布局-->
+        <RelativeLayout
+            android:id="@+id/rl_doctor_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/doctor_img"
+            android:padding="@dimen/home_rl_padding"
+            >
+
+            <TextView
+                android:id="@+id/header_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/navigation_back"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/head_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_doctor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_doctor"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/grap15"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/reserve_details_static"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_doctor_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_doctor_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/grap15"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/reserve_details_static"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_doctor_hospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_doctor_position"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/grap15"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!--擅长项-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/home_rl_padding"
+            >
+
+            <ImageView
+                android:id="@+id/iv_good_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/doctor_icon_01"
+                />
+
+            <TextView
+                android:id="@+id/tv_good_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_common"
+                android:layout_toRightOf="@+id/iv_good_at"
+                android:text="擅长"
+                android:textSize="@dimen/reserve_details_static"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_good_at_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/home_rl_padding"
+            android:text=""
+            android:textColor="@color/msg_text"
+            android:textSize="@dimen/reserve_details_dynamic"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grap1"
+            android:background="@color/separate_view_color"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/home_rl_padding"
+            >
+
+            <ImageView
+                android:id="@+id/iv_honor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/doctor_icon_02"
+                />
+
+            <TextView
+                android:id="@+id/tv_honor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_common"
+                android:layout_toRightOf="@+id/iv_honor"
+                android:text="荣誉"
+                android:textSize="@dimen/reserve_details_static"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_honor_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/home_rl_padding"
+            android:text=""
+            android:textColor="@color/msg_text"
+            android:textSize="@dimen/reserve_details_dynamic"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grap1"
+            android:background="@color/separate_view_color"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/home_rl_padding"
+            >
+
+            <ImageView
+                android:id="@+id/iv_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/doctor_icon_03"
+                />
+
+            <TextView
+                android:id="@+id/tv_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_common"
+                android:layout_toRightOf="@+id/iv_experience"
+                android:text="执业经历"
+                android:textSize="@dimen/reserve_details_static"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_experiennce_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/home_rl_padding"
+            android:text=""
+            android:textColor="@color/msg_text"
+            android:textSize="@dimen/reserve_details_dynamic"
+            />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,144 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+
+    <style name="indicator_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 除去title -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 除去背景色 -->
+    </style>
+
+    <style name="ActionBar">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/header_bg</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/base_action_bar_height</item>
+    </style>
+
+    <style name="ActionBarTitle">
+        <item name="android:textSize">@dimen/base_action_bar_title_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">1.0dip</item>
+    </style>
+
+    <style name="checkbox_terms" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@drawable/checkbox_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!--主界面底部radiobutton样式-->
+    <style name="radiobutton_whole">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/home_tab_size</item>
+    </style>
+
+    <!--右侧箭头样式-->
+    <style name="right_arrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@mipmap/arrow_right</item>
+        <item name="android:clickable">false</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--listview标题样式-->
+    <style name="lv_tv_titlestyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+    </style>
+
+    <!--listview内容样式-->
+    <style name="lv_tv_msgstyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <!--所有按钮的样式-->
+    <style name="all_button_style">
+        <item name="android:background">@drawable/all_button_background</item>
+        <item name="android:textColor">@color/all_button_textcolor</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">@dimen/home_rl_padding</item>
+    </style>
+
+    <!--所有按钮的样式2-->
+    <style name="all_button_style2">
+        <item name="android:background">@drawable/all_button_background2</item>
+        <item name="android:textColor">@color/all_button_textcolor2</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">@dimen/home_rl_padding</item>
+    </style>
+
+
+    <!--listview第二行样式-->
+    <style name="lv_tv_substyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="listview_style">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:divider">@null</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:listSelector">@color/transparent</item>
+    </style>
+    <style name="no_title_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <!-- 除去title -->
+    </style>
+    <style name="myDialogStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/low_gray</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColor">#313233</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="update_alert" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- 竖直分割线 -->
+    <style name="VerticalDivider">
+        <item name="android:layout_width">@dimen/grap0.01</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+
+    <!-- 水平分割线 -->
+    <style name="horizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+</resources>
